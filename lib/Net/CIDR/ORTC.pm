@@ -6,7 +6,7 @@ use warnings;
 
 use Carp qw/carp croak/;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
@@ -325,7 +325,7 @@ sub int2dd {
 # convert prefix length to netmask as integer
 sub len2mask {
 	die "bad prefix length $_[0]" if $_[0] < 0 || $_[0] > IPv4_BITS;
-	return ALL_ONES - (1 << (IPv4_BITS - $_[0])) + 1;
+	return ALL_ONES - 2**(IPv4_BITS - $_[0]) + 1;
 }
 
 # $net - is integer

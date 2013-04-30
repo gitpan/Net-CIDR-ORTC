@@ -38,6 +38,7 @@ is( len2mask(31), dd2int('255.255.255.254'), '/31');
 is( len2mask(24), 0xffffff00, '/24');
 is( len2mask(16), 0xffff0000, '/16');
 is( len2mask(8), 0xff000000, '/8');
+is( len2mask(0), 0x00000000, '/0');
 
 *is_valid_prefix = \&Net::CIDR::ORTC::is_valid_prefix;
 

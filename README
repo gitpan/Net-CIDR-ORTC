@@ -1,4 +1,4 @@
-Net-CIDR-ORTC version 0.01
+Net-CIDR-ORTC version 0.02
 ==========================
 
 This module implements Optimal Routing Table Compressor (ORTC) algorithm as
